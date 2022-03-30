@@ -8,6 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89762e0c-e086-4398-940f-845a936488c9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Orbus/BooksImport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Orbus/BooksImporter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Orbus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Orbus/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648626557789</updated>
       <workItem from="1648626575287" duration="1000" />
-      <workItem from="1648626625785" duration="1447000" />
+      <workItem from="1648626625785" duration="1850000" />
     </task>
     <servers />
   </component>
@@ -75,6 +76,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
