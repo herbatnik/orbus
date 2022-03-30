@@ -16,13 +16,13 @@ namespace Orbus;
 
 class Program
 {
-	async Task Main()
+	public static async Task Main()
 	{
 		// if project grows use Microsoft's Host builder and facilitate its dependency injection 
 		using var cts = new CancellationTokenSource();
 		using var httpClient = new HttpClient();
 		var bookFeed = new BookFeed(httpClient);
-		var bookStore = new BookStore();
+		var bookStore = new BookStore("connString"); // the connString should come from either env variable or configuration file
 		var booksImport = new BooksImporter(bookFeed, bookStore);
 		await booksImport.Import(cts.Token);
 	}
