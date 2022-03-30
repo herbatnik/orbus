@@ -15,10 +15,13 @@ public class BookFeed : IBookFeed
     {
         var url = "https://www.w3schools.com/xml/books.xml";
         var response = await _httpClient.GetAsync(url, cancellationToken);
-        var xml = await response.Content.ReadAsStringAsync(cancellationToken);
 
         // parse books xml to a books collection
-        var document = XDocument.Parse(xml);
+        var document = await XDocument.LoadAsync(
+            await response.Content.ReadAsStreamAsync(cancellationToken),
+            LoadOptions.None,
+            cancellationToken);
+
         var books = (from b in document.Descendants("book")
             select new
             {
