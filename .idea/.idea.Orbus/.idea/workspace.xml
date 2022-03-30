@@ -4,7 +4,9 @@
     <projectFile>Orbus/Orbus.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89762e0c-e086-4398-940f-845a936488c9" name="Changes" comment="" />
+    <list default="true" id="89762e0c-e086-4398-940f-845a936488c9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Orbus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Orbus/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,12 +19,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Orbus" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -52,8 +60,12 @@
       <option name="presentableId" value="Default" />
       <updated>1648626557789</updated>
       <workItem from="1648626575287" duration="1000" />
+      <workItem from="1648626625785" duration="370000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />

@@ -32,10 +32,13 @@ public class BooksImport
 	{
 		// download books xml from endpoint
 		string xml;
-		using (var client = new WebClient())
+		using (var client = new HttpClient())
 		{
 			var url = "https://www.w3schools.com/xml/books.xml";
-			xml = client.DownloadString(url);
+			xml = client.GetAsync(url)
+				.GetAwaiter().GetResult()
+				.Content.ReadAsStringAsync()
+				.GetAwaiter().GetResult();
 		}
 		
 		// parse books xml to a books collection
