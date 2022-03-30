@@ -11,6 +11,11 @@ It's important to note that this code isn't designed to run in any meaningful
 way, so please do not spend time trying to get it to work. We do expect you to
 submit code that compiles though.
 **********************************************************************************/
+
+using System.Net;
+using System.Xml.Linq;
+using Microsoft.Data.SqlClient;
+
 class Program
 {
 	void Main()
