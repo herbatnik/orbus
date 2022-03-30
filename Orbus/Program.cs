@@ -18,27 +18,26 @@ using Microsoft.Data.SqlClient;
 
 class Program
 {
-	void Main()
+	async Task Main()
 	{
+		using var cts = new CancellationTokenSource();
 		var booksImport = new BooksImport();
-		booksImport.Import();
+		await booksImport.Import(cts.Token);
 	}
 }
 
 // Question: What is the main problem with the BooksImport class?
 public class BooksImport
 {
-	public void Import()
+	public async Task Import(CancellationToken cancellationToken)
 	{
 		// download books xml from endpoint
 		string xml;
 		using (var client = new HttpClient())
 		{
 			var url = "https://www.w3schools.com/xml/books.xml";
-			xml = client.GetAsync(url)
-				.GetAwaiter().GetResult()
-				.Content.ReadAsStringAsync()
-				.GetAwaiter().GetResult();
+			var response = await client.GetAsync(url, cancellationToken);
+			xml = await response.Content.ReadAsStringAsync(cancellationToken);
 		}
 		
 		// parse books xml to a books collection
@@ -53,21 +52,19 @@ public class BooksImport
 					 });
 		
 		// save books to the database
-		using (var conn = new SqlConnection("connString"))
-		using (var comm = conn.CreateCommand())
+		await using (var conn = new SqlConnection("connString"))
+		await using (var comm = conn.CreateCommand())
+		await using (var trans = conn.BeginTransaction())
 		{
-			using (var trans = conn.BeginTransaction())
+			foreach (var b in books)
 			{
-				foreach (var b in books)
-				{
-					// build sql or call sp to insert book - this isn't important
-					// for this exercise so please don't spend time trying to
-					// write code here.
-					comm.ExecuteNonQuery();
-				}
-				
-				trans.Commit();
+				// build sql or call sp to insert book - this isn't important
+				// for this exercise so please don't spend time trying to
+				// write code here.
+				await comm.ExecuteNonQueryAsync(cancellationToken);
 			}
+			
+			trans.Commit();
 		}
 	}
 }
