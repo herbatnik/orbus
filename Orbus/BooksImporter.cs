@@ -1,6 +1,10 @@
 ﻿namespace Orbus;
 
 // Question: What is the main problem with the BooksImport class?
+// it was
+// - violating the single responsibility
+// - using deprecated WebClient
+// - 
 public class BooksImporter
 {
     private readonly IBookFeed _bookFeed;

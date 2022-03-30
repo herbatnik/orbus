@@ -8,8 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89762e0c-e086-4398-940f-845a936488c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Orbus/BooksImport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Orbus/BooksImporter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orbus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Orbus/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Orbus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orbus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orbus/BookFeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Orbus/BookFeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orbus/BooksImporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Orbus/BooksImporter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648626557789</updated>
       <workItem from="1648626575287" duration="1000" />
-      <workItem from="1648626625785" duration="1850000" />
+      <workItem from="1648626625785" duration="3017000" />
     </task>
     <servers />
   </component>
@@ -89,5 +90,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Orbus/BooksImporter.cs</url>
+          <line>23</line>
+          <properties documentPath="D:\personal\Orbus Tech Test Instructions Oct 2021 v2\solution\Orbus\BooksImporter.cs" initialLine="19" containingFunctionPresentation="method 'Import'">
+            <startOffsets>
+              <option value="572" />
+            </startOffsets>
+            <endOffsets>
+              <option value="630" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Orbus/BookFeed.cs</url>
+          <line>35</line>
+          <properties documentPath="D:\personal\Orbus Tech Test Instructions Oct 2021 v2\solution\Orbus\BookFeed.cs" initialLine="32" containingFunctionPresentation="method 'FetchBooks'">
+            <startOffsets>
+              <option value="1435" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1448" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

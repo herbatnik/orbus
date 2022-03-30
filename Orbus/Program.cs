@@ -16,6 +16,8 @@ namespace Orbus;
 
 class Program
 {
+	// since most of this code is infrastructure layer related (BookFeed and BookStore) it should be covered with the integration tests
+	// the only class that makes sense to be covered by unit tests is the BooksImporter which contains business logic of this problem's domain
 	public static async Task Main()
 	{
 		// if project grows use Microsoft's Host builder and facilitate its dependency injection 
