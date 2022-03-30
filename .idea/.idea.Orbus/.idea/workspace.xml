@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89762e0c-e086-4398-940f-845a936488c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Orbus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orbus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Orbus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Orbus/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648626557789</updated>
       <workItem from="1648626575287" duration="1000" />
-      <workItem from="1648626625785" duration="990000" />
+      <workItem from="1648626625785" duration="1447000" />
     </task>
     <servers />
   </component>
