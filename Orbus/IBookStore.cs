@@ -2,5 +2,5 @@
 
 public interface IBookStore
 {
-    Task SaveBooks(IEnumerable<object> books, CancellationToken cancellationToken);
+    Task SaveBooks(IEnumerable<Book> books, CancellationToken cancellationToken);
 }

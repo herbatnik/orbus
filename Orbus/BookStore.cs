@@ -11,13 +11,13 @@ public class BookStore : IBookStore
         _connectionString = connectionString;
     }
     
-    public async Task SaveBooks(IEnumerable<object> books, CancellationToken cancellationToken)
+    public async Task SaveBooks(IEnumerable<Book> books, CancellationToken cancellationToken)
     {
         await using var conn = new SqlConnection(_connectionString);
         await using var comm = conn.CreateCommand();
         await using var trans = conn.BeginTransaction();
 
-        foreach (var b in books)
+        foreach (var book in books)
         {
             // build sql or call sp to insert book - this isn't important
             // for this exercise so please don't spend time trying to

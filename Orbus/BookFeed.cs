@@ -11,7 +11,7 @@ public class BookFeed : IBookFeed
         _httpClient = httpClient;
     }
 
-    public async Task<IEnumerable<object>> FetchBooks(CancellationToken cancellationToken)
+    public async Task<IEnumerable<Book>> FetchBooks(CancellationToken cancellationToken)
     {
         var url = "https://www.w3schools.com/xml/books.xml";
         var response = await _httpClient.GetAsync(url, cancellationToken);
@@ -22,13 +22,13 @@ public class BookFeed : IBookFeed
             LoadOptions.None,
             cancellationToken);
 
-        var books = (from b in document.Descendants("book")
-            select new
+        var books = document.Descendants("book")
+            .Select(bookXml => new Book
             {
-                Category = b.Attribute("category").Value,
-                Title = b.Element("title").Value,
-                Authors = b.Elements("author").Select(e => e.Value),
-                Price = decimal.Parse(b.Element("price").Value)
+                Category = bookXml.Attribute("category")?.Value,
+                Title = bookXml.Element("title")?.Value,
+                Authors = bookXml.Elements("author").Select(e => e.Value),
+                Price = decimal.TryParse(bookXml.Element("price")?.Value, out var parsedPrice) ? parsedPrice : null,
             });
         return books;
     }

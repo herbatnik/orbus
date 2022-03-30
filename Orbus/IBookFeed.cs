@@ -2,5 +2,5 @@
 
 public interface IBookFeed
 {
-    Task<IEnumerable<object>> FetchBooks(CancellationToken cancellationToken);
+    Task<IEnumerable<Book>> FetchBooks(CancellationToken cancellationToken);
 }
